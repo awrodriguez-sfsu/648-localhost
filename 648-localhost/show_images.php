@@ -1,29 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--<script type="text/javascript" src="js/scripts.js" ></script>-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script type="text/javascript" src="js/tab.js"></script>
-        <script>
-            var main = function () {
-                $('#small').click(function (event) {
-                    event.preventDefault();
-                    $(this).tab('show');
-                });
-
-                $('#medium').click(function (event) {
-                    event.preventDefault();
-                    $(this).tab('show');
-                });
-
-                $('#large').click(function (event) {
-                    event.preventDefault();
-                    $(this).tab('show');
-                });
-            };
-
-            $(document).ready(main);
-        </script>
         <?php
         include_once './db_connect.php';
         include_once './header.php';
@@ -64,28 +43,41 @@
     <body>
         <div class="container">
             <div role="tabpanel">
-                <!--Navigation Tabs-->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#small" aria-controls="small" role="tab" data-toggle="tab">Small</a></li>
                     <li role="presentation"><a href="#medium" aria-controls="medium" role="tab" data-toggle="tab">Medium</a></li>
                     <li role="presentation"><a href="#large" aria-controls="large" role="tab" data-toggle="tab">Large</a></li>
                 </ul>
 
-                <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade active in" id="small">
+                    <div role="tabpanel" class="tab-pane active" id="small">
                         <?php
-                        print "<img src=\"" . $small['path'] . "\" />";
+                        print "<img src=\"" . $small['path'] . "\"/>";
+                        print "<br>";
+                        print "Name: " . $small['name'];
+                        print "<br>";
+                        print "Description: " . $small['description'];
+                        print "<br>";
                         ?>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="medium">
+                    <div role="tabpanel" class="tab-pane" id="medium">
                         <?php
-                        print "<img src=\"" . $medium['path'] . "\" />";
+                        print "<img src=\"" . $medium['path'] . "\"/>";
+                        print "<br>";
+                        print "Name: " . $medium['name'];
+                        print "<br>";
+                        print "Description: " . $mediums['description'];
+                        print "<br>";
                         ?>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="large">
+                    <div role="tabpanel" class="tab-pane" id="large">
                         <?php
-                        print "<img src=\"" . $large['path'] . "\" />";
+                        print "<img src=\"" . $large['path'] . "\"/>";
+                        print "<br>";
+                        print "Name: " . $large['name'];
+                        print "<br>";
+                        print "Description: " . $large['description'];
+                        print "<br>";
                         ?>
                     </div>
                 </div>
