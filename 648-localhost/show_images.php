@@ -66,7 +66,7 @@
                         print "<br>";
                         print "Name: " . $medium['name'];
                         print "<br>";
-                        print "Description: " . $mediums['description'];
+                        print "Description: " . $medium['description'];
                         print "<br>";
                         ?>
                     </div>
