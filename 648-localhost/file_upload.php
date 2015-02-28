@@ -90,11 +90,11 @@ switch ($uploaded_extension) {
         break;
     case 'png':
         $image_small = imagecreatefrompng($server_file);
-        $image_med = imagecreatefromjpeg($server_file);
+        $image_med = imagecreatefrompng($server_file);
         break;
     case 'gif':
         $image_small = imagecreatefromgif($server_file);
-        $image_med = imagecreatefromjpeg($server_file);
+        $image_med = imagecreatefromgif($server_file);
         break;
     default:
         $image_small = false;
