@@ -15,7 +15,8 @@ try {
 
     $results = $statement->fetchAll();
 
-    print_r($results);
+    
+
 } catch (Exception $exc) {
     echo $exc->getTraceAsString();
 }

@@ -107,8 +107,8 @@ if ($image_small !== false && $image_med !== false) {
     imagecopyresampled($image_small_identifier, $image_small, 0, 0, 0, 0, $small_width, $small_height, $check[0], $check[1]);
     imagecopyresampled($image_med_identifier, $image_med, 0, 0, 0, 0, $med_width, $med_height, $check[0], $check[1]);
 
-    $small_path = $server_upload_directory . "small_" . substr(pathinfo($$server_file, PATHINFO_FILENAME), 6, 12) . "." . $uploaded_extension; // unique file name
-    $med_path = $server_upload_directory . "medium_" . substr(pathinfo($$server_file, PATHINFO_FILENAME), 6, 12) . "." . $uploaded_extension; // unique file name
+    $small_path = $server_upload_directory . "small_" . substr(pathinfo($server_file, PATHINFO_FILENAME), 6, 12) . "." . $uploaded_extension; // unique file name
+    $med_path = $server_upload_directory . "medium_" . substr(pathinfo($server_file, PATHINFO_FILENAME), 6, 12) . "." . $uploaded_extension; // unique file name
 }
 
 // Call appropriate function depending on image type
